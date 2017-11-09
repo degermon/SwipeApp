@@ -6,6 +6,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,20 +20,60 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ebl-FY-BBV">
-                                <rect key="frame" x="40" y="275" width="295" height="137"/>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ebl-FY-BBV">
+                                <rect key="frame" x="146" y="297" width="83" height="73"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="60"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ok0-9v-j5i">
+                                <rect key="frame" x="16" y="572" width="120" height="67"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="GZa-Qc-gTa"/>
+                                    <constraint firstAttribute="height" constant="67" id="aMt-41-Y9v"/>
+                                </constraints>
+                                <string key="text">Swipe left 
+to decrease 
+the number</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L2p-wd-dZj">
+                                <rect key="frame" x="239" y="572" width="120" height="67"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="23Q-B0-761"/>
+                                </constraints>
+                                <string key="text">Swipe right
+to increase 
+the number</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bP2-tU-4Yh">
+                                <rect key="frame" x="95" y="205" width="185" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="Ebl-FY-BBV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="GP9-XL-eST"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ebl-FY-BBV" secondAttribute="trailing" constant="40" id="TRM-IT-yBD"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ebl-FY-BBV" secondAttribute="bottom" constant="255" id="UpX-om-AJy"/>
-                            <constraint firstItem="Ebl-FY-BBV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="255" id="cQD-lv-tvc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ebl-FY-BBV" secondAttribute="bottom" constant="297" id="6jX-ve-Czw"/>
+                            <constraint firstItem="Ok0-9v-j5i" firstAttribute="firstBaseline" secondItem="L2p-wd-dZj" secondAttribute="firstBaseline" id="Cdd-oI-Y3h"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ok0-9v-j5i" secondAttribute="bottom" constant="28" id="Ihz-cz-2zh"/>
+                            <constraint firstItem="L2p-wd-dZj" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Kq7-eT-bV2"/>
+                            <constraint firstItem="Ebl-FY-BBV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="146" id="REA-P8-h8b"/>
+                            <constraint firstItem="L2p-wd-dZj" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="WGP-N4-caB"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Ok0-9v-j5i" secondAttribute="trailingMargin" id="aVb-ha-GCg"/>
+                            <constraint firstItem="Ebl-FY-BBV" firstAttribute="firstBaseline" secondItem="bP2-tU-4Yh" secondAttribute="baseline" constant="120.5" id="boz-4l-f83"/>
+                            <constraint firstItem="Ok0-9v-j5i" firstAttribute="baseline" secondItem="L2p-wd-dZj" secondAttribute="baseline" id="etJ-So-yoe"/>
+                            <constraint firstItem="Ok0-9v-j5i" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="j4m-Yt-I34"/>
+                            <constraint firstItem="bP2-tU-4Yh" firstAttribute="centerX" secondItem="Ebl-FY-BBV" secondAttribute="centerX" id="qHi-x2-nBb"/>
+                            <constraint firstItem="Ebl-FY-BBV" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="rcX-Pc-pCw"/>
+                            <constraint firstItem="Ebl-FY-BBV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="s4U-BR-rFR"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <connections>
